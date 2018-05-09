@@ -17321,9 +17321,11 @@ i3EAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Optimization-based-techniques">Optimization-based techniques<a class="anchor-link" href="#Optimization-based-techniques">&#182;</a></h2><p>-Wiener based deconvolution 
--Richardson-Lucy deconvolution
--Iterative deconvolution techniques</p>
+<h2 id="Optimization-based-techniques">Optimization-based techniques<a class="anchor-link" href="#Optimization-based-techniques">&#182;</a></h2><ul>
+<li>Wiener based deconvolution </li>
+<li>Richardson-Lucy deconvolution</li>
+<li>Iterative deconvolution techniques</li>
+</ul>
 
 </div>
 </div>
@@ -17370,13 +17372,15 @@ $$=E[|I(\omega)|^2|1-G(\omega)H(\omega)|^2+|G(\omega)N(\omega)|^2-I(\omega)G^\as
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wiener-filter-based-deconvolution">Wiener-filter based deconvolution<a class="anchor-link" href="#Wiener-filter-based-deconvolution">&#182;</a></h2><p>$$\epsilon(\omega)=S(\omega)|1-G(\omega)H(\omega)|^2+|G(\omega)N(\omega)|^2$$
-$$=S(\omega)[1-G(\omega)H(\omega)][1-G(\omega)H(\omega)]^\ast+[G(\omega)G^\ast(\omega)|N(\omega)|^2]$$
--Taking the Wirtinger derivative of this expression results and equating to zero
+$$=S(\omega)[1-G(\omega)H(\omega)][1-G(\omega)H(\omega)]^\ast+[G(\omega)G^\ast(\omega)|N(\omega)|^2]$$</p>
+<ul>
+<li>Taking the Wirtinger derivative of this expression results and equating to zero
 $$S(\omega)(1-G(\omega)H(\omega))^\ast [-H(\omega)]+G^\ast(\omega)|N(\omega)|^2=0$$
 $$ \implies G^\ast (\omega)=\frac{S(\omega)H(\omega)}{E[|N(\omega)|^2]+|H(\omega)|^2S(\omega)}$$
-$$ \implies G (\omega)=\frac{S(\omega)H^\ast(\omega)}{E[|N(\omega)|^2]+|H(\omega)|^2S(\omega)}$$
--Denoting $SNR=\frac{E[|X(\omega)|^2]}{E[|N(\omega)|^2]}=\frac{S(\omega)}{E[|N(\omega)|^2}$
-$$ \implies G (\omega)=\frac{H^\ast(\omega)}{SNR+|H(\omega)|^2}$$</p>
+$$ \implies G (\omega)=\frac{S(\omega)H^\ast(\omega)}{E[|N(\omega)|^2]+|H(\omega)|^2S(\omega)}$$</li>
+<li>Denoting $SNR=\frac{E[|X(\omega)|^2]}{E[|N(\omega)|^2]}=\frac{S(\omega)}{E[|N(\omega)|^2}$
+$$ \implies G (\omega)=\frac{H^\ast(\omega)}{SNR+|H(\omega)|^2}$$</li>
+</ul>
 
 </div>
 </div>
