@@ -1,23 +1,56 @@
-2018-06-30 18:45:04 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
-2018-06-30 18:45:04 INFO  main [mitsuba.cpp:377] Parsing scene description from "teapot/teapot1-2.xml" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
-2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Loading geometry from "teapot.obj" ..
-2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Object001: 1024 triangles, 529 vertices (merged 2543 vertices).
-2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Done with "teapot.obj" (took 3 ms)
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
-2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/direct.so" ..
-2018-06-30 18:45:04 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (1024 primitives) ..
-2018-06-30 18:45:04 INFO  ren0 [KDTreeBase] Finished -- took 5 ms.
-2018-06-30 18:45:04 WARN  ren0 [Scene] No emitters found -- adding sun & sky.
-2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sunsky.so" ..
-2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sky.so" ..
-2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/envmap.so" ..
-2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/lanczos.so" ..
-2018-06-30 18:45:04 INFO  ren0 [EnvironmentMap] Precomputing data structures for environment map sampling (515.0 KiB)
-2018-06-30 18:45:04 INFO  ren0 [EnvironmentMap] Done (took 0 ms)
-2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sphere.so" ..
-2018-06-30 18:45:04 INFO  ren0 [SamplingIntegrator] Starting render job (400x400, 128 samples, 8 cores, SSE2 enabled) ..
+2018-06-30 18:47:22 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2018-06-30 18:47:22 INFO  main [mitsuba.cpp:377] Parsing scene description from "violin_case/violin_case22.xml" ..
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] Loading geometry from "violin_case.obj" ..
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] latch: 584 triangles, 296 vertices (merged 1456 vertices).
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] case: 856 triangles, 430 vertices (merged 2138 vertices).
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] holder: 192 triangles, 104 vertices (merged 472 vertices).
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] handle: 328 triangles, 166 vertices (merged 818 vertices).
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] lock: 160 triangles, 84 vertices (merged 396 vertices).
+2018-06-30 18:47:22 WARN  main [WavefrontOBJ] Could not find referenced material library './vp.mtl'
+2018-06-30 18:47:22 INFO  main [WavefrontOBJ] Done with "violin_case.obj" (took 3 ms)
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2018-06-30 18:47:22 WARN  main [TriMesh] "latch": Unable to generate 2 vertex normals
+2018-06-30 18:47:22 INFO  main [PluginManager] Loading plugin "plugins/direct.so" ..
+2018-06-30 18:47:22 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (2120 primitives) ..
+2018-06-30 18:47:22 INFO  ren0 [KDTreeBase] Finished -- took 16 ms.
+2018-06-30 18:47:22 WARN  ren0 [Scene] No emitters found -- adding sun & sky.
+2018-06-30 18:47:22 INFO  ren0 [PluginManager] Loading plugin "plugins/sunsky.so" ..
+2018-06-30 18:47:22 INFO  ren0 [PluginManager] Loading plugin "plugins/sky.so" ..
+2018-06-30 18:47:22 INFO  ren0 [PluginManager] Loading plugin "plugins/envmap.so" ..
+2018-06-30 18:47:22 INFO  ren0 [PluginManager] Loading plugin "plugins/lanczos.so" ..
+2018-06-30 18:47:22 INFO  ren0 [EnvironmentMap] Precomputing data structures for environment map sampling (515.0 KiB)
+2018-06-30 18:47:22 INFO  ren0 [EnvironmentMap] Done (took 0 ms)
+2018-06-30 18:47:22 INFO  ren0 [PluginManager] Loading plugin "plugins/sphere.so" ..
+2018-06-30 18:47:22 INFO  ren0 [SamplingIntegrator] Starting render job (400x400, 128 samples, 8 cores, SSE2 enabled) ..
+2018-06-30 18:47:24 INFO  ren0 [RenderJob] Render time: 2.1800s
+2018-06-30 18:47:24 INFO  ren0 [LDRFilm] Writing image to "/home/sudarshan/git/OptimizationDeepLearningImageProcessing/LightFields/xmlFiles/violin_case/violin_case22.png" ..
+2018-06-30 18:47:24 INFO  main [statistics.cpp:142] Statistics:
+------------------------------------------------------------
+ * Loaded plugins :
+    -  plugins/diffuse.so [Smooth diffuse BRDF]
+    -  plugins/direct.so [Direct illumination integrator]
+    -  plugins/envmap.so [Environment map]
+    -  plugins/gaussian.so [Gaussian reconstruction filter]
+    -  plugins/lanczos.so [Lanczos Sinc filter]
+    -  plugins/ldrfilm.so [Low dynamic range film]
+    -  plugins/ldsampler.so [Low discrepancy sampler]
+    -  plugins/obj.so [OBJ triangle mesh loader]
+    -  plugins/perspective.so [Perspective camera]
+    -  plugins/sky.so [Skylight emitter]
+    -  plugins/sphere.so [Sphere intersection primitive]
+    -  plugins/sunsky.so [Sun & sky emitter]
+
+  * General :
+    -  Normal rays traced : 21.033 M
+    -  Shadow rays traced : 554.301 K
+
+  * Texture system :
+    -  Cumulative MIP map memory allocations : 1 MiB
+    -  Filtered texture lookups : 92.47 % (19.93 M of 21.55 M)
+    -  Lookups with clamped anisotropy : 0.00 % (0.00 of 19.93 M)
+------------------------------------------------------------
