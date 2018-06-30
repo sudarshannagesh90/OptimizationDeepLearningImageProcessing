@@ -1,0 +1,23 @@
+2018-06-30 18:45:04 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2018-06-30 18:45:04 INFO  main [mitsuba.cpp:377] Parsing scene description from "teapot/teapot1-2.xml" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
+2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Loading geometry from "teapot.obj" ..
+2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Object001: 1024 triangles, 529 vertices (merged 2543 vertices).
+2018-06-30 18:45:04 INFO  main [WavefrontOBJ] Done with "teapot.obj" (took 3 ms)
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2018-06-30 18:45:04 INFO  main [PluginManager] Loading plugin "plugins/direct.so" ..
+2018-06-30 18:45:04 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (1024 primitives) ..
+2018-06-30 18:45:04 INFO  ren0 [KDTreeBase] Finished -- took 5 ms.
+2018-06-30 18:45:04 WARN  ren0 [Scene] No emitters found -- adding sun & sky.
+2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sunsky.so" ..
+2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sky.so" ..
+2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/envmap.so" ..
+2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/lanczos.so" ..
+2018-06-30 18:45:04 INFO  ren0 [EnvironmentMap] Precomputing data structures for environment map sampling (515.0 KiB)
+2018-06-30 18:45:04 INFO  ren0 [EnvironmentMap] Done (took 0 ms)
+2018-06-30 18:45:04 INFO  ren0 [PluginManager] Loading plugin "plugins/sphere.so" ..
+2018-06-30 18:45:04 INFO  ren0 [SamplingIntegrator] Starting render job (400x400, 128 samples, 8 cores, SSE2 enabled) ..

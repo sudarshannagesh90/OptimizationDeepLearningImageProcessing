@@ -1,0 +1,8 @@
+2018-06-29 15:06:43 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2018-06-29 15:06:43 INFO  main [mitsuba.cpp:377] Parsing scene description from "alfa147.xml" ..
+2018-06-29 15:06:43 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2018-06-29 15:06:43 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
+2018-06-29 15:06:43 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2018-06-29 15:06:43 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
+2018-06-29 15:06:43 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
+2018-06-29 15:06:43 INFO  main [WavefrontOBJ] Loading geometry from "alfa147.obj" ..
