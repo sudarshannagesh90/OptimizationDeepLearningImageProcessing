@@ -138,45 +138,55 @@ def patchify(image, size):
 
 	return patches
 
-def create_dataset(data_source_path, filenames, destination_path, dataset_name):
+def create_dataset(data_source_path, dataset_name, destination_path, spacing_index):
 
 	hr_image = []
 	lr_image = []
-	for i in range(len(filenames)):
-		gif_name          = os.path.join(data_source_path,filenames[i],filenames[i]+".gif")
-		hr_image.append(extract_frames(gif_name))
-		img = cv2.imread(os.path.join(data_source_path,filenames[i],filenames[i]+"00.png"),0)
-		lr_image.append(img)
+	with h5py.File(os.path.join(data_source_path, source_name_files+image_format),'r') as file:
+		data = np.array(file["data"])
+		label = np.array(file["label"])
+		hr_image.extend(data)
+		lr_image.extend(label)
 
-	num_images = len(hr_image)*0.8
-
-	lr_image_training = lr_image[0:num_images]
-	hr_image_training = hr_image[0:num_images]
-
-	lr_image_testing = lr_image[num_images:]
-	hr_image_testing = hr_image[num_images:]
-
-	print("Number of training images in the dataset: "+str(num_images))
-	print("Number of testing images in the dataset: "+str(len(hr_image)-num_images))
+	num_images = len(lr_image)*0.8
 	
-	lr_set_training = np.concatenate(lr_image_training)
-	hr_set_training = np.concatenate(hr_image_training)
+	print("Number of training images in the dataset: "+str(num_images*0.8))
+	
+	for nnIndex in range(len(hr_image)/num_images):
+		lr_stack = []
+		hr_stack = []
+		for i in range(num_images):
+			lr_stack.append(patchify(lr_image[i], size = patch_size))
+			hr_stack.append(patchify(hr_image[nnIndex+(i-1)*25], size = patch_size))
 
-	lr_set_training = lr_set_training.astype(np.uint8)
-	hr_set_training = hr_set_training.astype(np.uint8)
+		lr_set = np.concatenate(lr_stack)
+		hr_set = np.concatenate(hr_stack)
 
-	lr_set_testing  = np.concatenate(lr_image_testing)
-	hr_set_testing  = np.concatenate(hr_image_testing)
+		lr_set = lr_set.astype(np.uint8)
+		hr_set = hr_set.astype(np.uint8)
 
-	lr_set_testing  = lr_set_training.astype(np.uint8)
-	hr_set_testing  = hr_set_training.astype(np.uint8)
+		create_h5(data = lr_set, label = hr_set, path = destination_path, file_name = dataset_name+str(nnIndex)+"training.h5")
+		print("data of shape ", lr_set.shape, "and label of shape ", hr_set.shape, " created of type", lr_set.dtype, "nnIndex", str(nnIndex))
 
-	create_h5(data = lr_set_training, label = hr_set_training, path = destination_path, file_name = dataset_name+"training.h5")
-	print("data of shape ", lr_set_training.shape, "and label of shape ", hr_set_training.shape, " created of type ", lr_set_training.dtype)
+	print("Number of testing images in the dataset: "+str(num_images))
+	
+	for nnIndex in range(len(hr_image)/num_images):
+		lr_stack = []
+		hr_stack = []
+		for i in range(num_images*0.8,num_images):
+			lr_stack.append(patchify(lr_image[i], size = patch_size))
+			hr_stack.append(patchify(hr_image[nnIndex+(i-1)*25], size = patch_size))
 
-	create_h5(data = lr_set_testing, label = hr_set_testing, path = destination_path, file_name = dataset_name+"testing.h5")
-	print("data of shape ", lr_set_testing.shape, "and label of shape ", hr_set_testing.shape, " created of type ", lr_set_testing.dtype)
-    
+		lr_set = np.concatenate(lr_stack)
+		hr_set = np.concatenate(hr_stack)
+
+		lr_set = lr_set.astype(np.uint8)
+		hr_set = hr_set.astype(np.uint8)
+
+		create_h5(data = lr_set, label = hr_set, path = destination_path, file_name = dataset_name+str(nnIndex)+"testing.h5")
+		print("data of shape ", lr_set.shape, "and label of shape ", hr_set.shape, " created of type", lr_set.dtype, "nnIndex", str(nnIndex))
+
+   
 def extract_frames(inGif):
 	frame = Image.open(inGif)
 	nframes = 0
